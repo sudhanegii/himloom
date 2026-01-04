@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | HimLoom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="auth-box">
+    <h2>Login to HimLoom</h2>
+
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Password" required>
+
+    <button onclick="login()">Login</button>
+
+    <p>Don't have an account?
+      <a href="register.html">Register here</a>
+    </p>
+  </div>
+
+<script>
+function login() {
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+
+  let storedUser = localStorage.getItem(email);
+
+  if (!storedUser) {
+    alert("User not found. Please register.");
+    return;
+  }
+
+  let user = JSON.parse(storedUser);
+
+  if (user.password === password) {
+    alert("Login successful!");
+    window.location.href = "products.html";
+  } else {
+    alert("Wrong password!");
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register | HimLoom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="auth-box">
+    <h2>Create Account</h2>
+
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Password" required>
+
+    <select id="role">
+      <option value="buyer">Buyer</option>
+      <option value="seller">Seller</option>
+    </select>
+
+    <button onclick="register()">Register</button>
+
+    <p>Already registered?
+      <a href="login.html">Login here</a>
+    </p>
+  </div>
+
+<script>
+function register() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+  let role = document.getElementById("role").value;
+
+  if (!email || !password) {
+    alert("Please fill all fields");
+    return;
+  }
+
+  let user = {
+    name: name,
+    email: email,
+    password: password,
+    role: role
+  };
+
+  localStorage.setItem(email, JSON.stringify(user));
+
+  alert("Registration successful! Please login.");
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

@@ -3,45 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Login | HimLoom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <div class="auth-box">
+  <div class="auth-container">
     <h2>Login to HimLoom</h2>
 
-    <input type="email" id="email" placeholder="Email" required>
-    <input type="password" id="password" placeholder="Password" required>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Password" required>
 
-    <button onclick="login()">Login</button>
+    <button class="btn-primary">Login</button>
 
-    <p>Don't have an account?
-      <a href="register.html">Register here</a>
+    <p class="auth-text">
+      New user?
+      <a href="register.html">Create an account</a>
     </p>
   </div>
-
-<script>
-function login() {
-  let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
-
-  let storedUser = localStorage.getItem(email);
-
-  if (!storedUser) {
-    alert("User not found. Please register.");
-    return;
-  }
-
-  let user = JSON.parse(storedUser);
-
-  if (user.password === password) {
-    alert("Login successful!");
-    window.location.href = "products.html";
-  } else {
-    alert("Wrong password!");
-  }
-}
-</script>
 
 </body>
 </html>

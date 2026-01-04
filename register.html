@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Register | HimLoom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <div class="auth-box">
+  <div class="auth-container">
     <h2>Create Account</h2>
 
+    <!-- IMPORTANT: ids added -->
     <input type="text" id="name" placeholder="Full Name" required>
     <input type="email" id="email" placeholder="Email" required>
     <input type="password" id="password" placeholder="Password" required>
@@ -19,9 +22,11 @@
       <option value="seller">Seller</option>
     </select>
 
-    <button onclick="register()">Register</button>
+    <!-- Button now calls function -->
+    <button class="btn-primary" onclick="register()">Register</button>
 
-    <p>Already registered?
+    <p class="auth-text">
+      Already registered?
       <a href="login.html">Login here</a>
     </p>
   </div>
@@ -33,7 +38,7 @@ function register() {
   let password = document.getElementById("password").value;
   let role = document.getElementById("role").value;
 
-  if (!email || !password) {
+  if (!name || !email || !password) {
     alert("Please fill all fields");
     return;
   }
@@ -47,7 +52,7 @@ function register() {
 
   localStorage.setItem(email, JSON.stringify(user));
 
-  alert("Registration successful! Please login.");
+  alert("Registration successful!");
   window.location.href = "login.html";
 }
 </script>

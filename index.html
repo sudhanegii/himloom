@@ -20,7 +20,7 @@
       </nav>
     </div>
   </header>
-
+<p id="logoutMsg" class="success-text"></p>
   <!-- HERO SECTION -->
   <section class="hero">
     <h1>HimLoom ◆ Handcrafted Marketplace</h1>
@@ -32,6 +32,13 @@
       Trusted by local artisans across India
     </span>
   </section>
+  <script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("logout") === "success") {
+    document.getElementById("logoutMsg").innerText =
+      "You have been logged out successfully.";
+  }
+</script>
 
 </body>
 </html>

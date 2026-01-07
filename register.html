@@ -7,13 +7,12 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Firebase -->
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-<script src="script.js" defer></script>
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="script.js"></script>
 </head>
-
-<body>
 
   <div class="auth-container">
     <h2>Create Account</h2>
@@ -27,9 +26,9 @@
       <option value="seller">Seller</option>
     </select>
 
-    <!-- IMPORTANT: no onclick -->
-    
-<button id="registerBtn" class="btn-primary">Register</button>
+    <!-- Button -->
+    <button class="btn-primary" onclick="register()">Register</button>
+
     <p class="auth-text">
       Already registered?
       <a href="login.html">Login here</a>

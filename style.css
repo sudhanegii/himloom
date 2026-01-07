@@ -6,13 +6,13 @@
 }
 
 body {
-  background: #f9f9fc;
+  background: #f3f1f4;
   color: #333;
 }
 
 /* NAVBAR */
 .navbar {
-  background: white;
+  background: rgb(171, 145, 249);
   border-bottom: 1px solid #eee;
 }
 
@@ -83,14 +83,14 @@ body {
 .trust-text {
   margin-top: 24px;
   font-size: 14px;
-  color: #777;
+  color: #4b4949;
 }
 
 /* AUTH PAGES */
 .auth-container {
   width: 360px;
   margin: 120px auto;
-  background: white;
+  background: rgb(243, 243, 245);
   padding: 32px;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
@@ -106,7 +106,7 @@ body {
   width: 100%;
   padding: 12px;
   margin-bottom: 14px;
-  border: 1px solid #ccc;
+  border: 1px solid #160303;
   border-radius: 6px;
 }
 
@@ -116,7 +116,7 @@ body {
 }
 
 .auth-text a {
-  color: #6a5acd;
+  color: #442be2;
   text-decoration: none;
   font-weight: 500;
 }
